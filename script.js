@@ -55,6 +55,11 @@ function scrollToDemos() {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function scrollToSection(sectionId) {
+  const el = document.getElementById(sectionId);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function openTelegramGroup() {
   window.open("https://t.me/your_meditations_group", "_blank");
 }

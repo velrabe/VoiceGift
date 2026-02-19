@@ -18,6 +18,34 @@
 </head>
 <body>
   <div class="page">
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header-inner">
+          <div class="site-logo">
+            <img src="./image/logo.svg" alt="VoiceGift" class="site-logo-img" />
+            <div class="site-logo-text">
+              <div class="site-logo-title">VoiceGift</div>
+              <div class="site-logo-subtitle">песни и медитации для детей</div>
+            </div>
+          </div>
+          <nav class="site-nav" aria-label="Основное меню">
+            <button class="site-nav-btn" type="button" onclick="scrollToSection('demos')">
+              Примеры
+            </button>
+            <button class="site-nav-btn" type="button" onclick="scrollToSection('why')">
+              Зачем это нужно
+            </button>
+            <button class="site-nav-btn" type="button" onclick="scrollToSection('price')">
+              Стоимость
+            </button>
+            <button class="site-nav-btn site-nav-btn-primary" type="button" onclick="scrollToSection('order')">
+              Заказ
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
     <header class="hero" id="top">
       <div class="container">
         <div class="hero-inner">
@@ -204,6 +232,52 @@
       </div>
     </header>
 
+    <section class="section section-alt-top">
+      <div class="container">
+        <div class="alt-block">
+          <div>
+            <div class="alt-title">Хотите песню не для ребёнка?</div>
+            <div class="alt-text">
+              Мы создаём треки для мужей, друзей, родителей и важных событий:
+              свадьбы, юбилеи, признания.
+            </div>
+
+            <div class="alt-avatars">
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">👨</div>
+                <div class="alt-avatar-label">Мужу / партнёру</div>
+              </div>
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">👩</div>
+                <div class="alt-avatar-label">Жене / подруге</div>
+              </div>
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">🧓</div>
+                <div class="alt-avatar-label">Бабушке</div>
+              </div>
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">👴</div>
+                <div class="alt-avatar-label">Дедушке</div>
+              </div>
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">👫</div>
+                <div class="alt-avatar-label">Друзьям</div>
+              </div>
+              <div class="alt-avatar-card">
+                <div class="alt-avatar-icon">🤝</div>
+                <div class="alt-avatar-label">Коллеге / команде</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-secondary">
+              Подробнее о взрослой версии
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <main>
       <section class="section" id="demos">
         <div class="container">
@@ -272,16 +346,28 @@
 
           <div class="why-grid">
             <article class="why-card">
-              <div class="why-icon">☁️</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Когда ребёнок грустит или устал</h3>
               <p class="why-text">
-                Тёплые слова в музыке помогают снять напряжение и напомнить:
-                «Я рядом, даже если меня нет в комнате».
+                Тёплые слова в музыке помогают снять напряжение и дают ощущение,
+                что рядом есть близкий взрослый — даже если его нет в комнате.
               </p>
             </article>
 
             <article class="why-card">
-              <div class="why-icon">🤍</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Когда его обидели</h3>
               <p class="why-text">
                 Личная песня или медитация возвращает ощущение безопасности
@@ -290,7 +376,13 @@
             </article>
 
             <article class="why-card">
-              <div class="why-icon">📞</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Когда скучает по маме или папе</h3>
               <p class="why-text">
                 Включить трек — как позвонить вам. Голос в наушниках обнимает,
@@ -299,7 +391,13 @@
             </article>
 
             <article class="why-card">
-              <div class="why-icon">⭐</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Чтобы мотивировать учиться</h3>
               <p class="why-text">
                 Через песни проще говорить о целях, вере в ребёнка и его талантах,
@@ -308,7 +406,13 @@
             </article>
 
             <article class="why-card">
-              <div class="why-icon">🌙</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Чтобы успокоить перед сном</h3>
               <p class="why-text">
                 Медитация звучит как сказка перед сном: плавный голос, мягкая музыка,
@@ -317,10 +421,16 @@
             </article>
 
             <article class="why-card">
-              <div class="why-icon">💌</div>
+              <div class="why-image">
+                <img
+                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                  alt="Семейный момент"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="why-title">Если хочется донести важные слова</h3>
               <p class="why-text">
-                Сказать «я горжусь тобой», «ты не один» или «я всегда рядом»
+                Передать «мы тобой гордимся», «ты не один» и «мы всегда рядом»
                 в формате, который ребёнок точно услышит.
               </p>
             </article>
@@ -328,98 +438,57 @@
         </div>
       </section>
 
-      <section class="section" id="product">
+      <section class="section" id="price">
         <div class="container">
           <div class="section-header">
             <div class="section-kicker">
               <span class="section-kicker-dot"></span>
               <span>Что именно вы получаете</span>
             </div>
-            <h2 class="section-title">Песня или медитация — на выбор</h2>
+            <h2 class="section-title">Стоимость и скорость</h2>
             <p class="section-subtitle">
-              Расскажите мне о ребёнке и ситуации, а я превращу это в трек, который
+              Расскажите о ребёнке и ситуации, а мы превратим это в трек, который
               хочется переслушивать.
             </p>
           </div>
 
-          <div class="product-grid">
-            <article class="product-card">
-              <div class="product-label">
-                <span class="chip-icon">♪</span>
-                <span>Песня для ребёнка</span>
-                <span class="product-label-pill">эмоциональный подарок</span>
-              </div>
-              <h3 class="product-title">Индивидуальная семейная песня</h3>
-              <ul class="product-list">
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Сюжет и слова, написанные под вашего ребёнка и вашу историю.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Можно добавить голос мамы или папы — вы поёте несколько строк.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Трек останется с ним навсегда — как аудио-дневник вашей любви.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Такие песни сильнее любых длинных разговоров и «педагогики».</span>
-                </li>
-              </ul>
-            </article>
-
-            <article class="product-card">
-              <div class="product-label">
-                <span class="chip-icon">☾</span>
-                <span>Медитация для ребёнка</span>
-                <span class="product-label-pill">мягкая поддержка</span>
-              </div>
-              <h3 class="product-title">Индивидуальная медитация</h3>
-              <ul class="product-list">
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Успокаивает перед сном — как любимая сказка с понятными образами.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Помогает проживать эмоции: страх, обиду, тревогу, усталость.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Передаёт важные смыслы: ценность, опору, веру в себя и поддержку семьи.</span>
-                </li>
-                <li>
-                  <span class="product-bullet"></span>
-                  <span>Её можно слушать регулярно — как личный ритуал успокоения.</span>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="price">
-        <div class="container">
           <div class="price-card">
-            <div>
-              <div class="price-main-label">Стоимость и скорость</div>
+            <div class="price-card-left">
+              <article class="product-card product-card-in-price">
+                <div class="product-label">
+                  <span class="chip-icon">♪</span>
+                  <span>Песня для ребёнка</span>
+                  <span class="product-label-pill">эмоциональный подарок</span>
+                </div>
+                <h3 class="product-title">Индивидуальная семейная песня</h3>
+                <ul class="product-list">
+                  <li>
+                    <span class="product-bullet"></span>
+                    <span>Сюжет и слова, написанные под вашего ребёнка и вашу историю.</span>
+                  </li>
+                  <li>
+                  <span class="product-bullet"></span>
+                  <span>Можно добавить голос мамы или папы — несколько строк, которые прозвучат в треке.</span>
+                  </li>
+                  <li>
+                    <span class="product-bullet"></span>
+                    <span>Трек останется с ним навсегда — как аудио-дневник вашей любви.</span>
+                  </li>
+                  <li>
+                    <span class="product-bullet"></span>
+                    <span>Такие песни сильнее любых длинных разговоров и «педагогики».</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+            <div class="price-card-right">
               <div class="price-row">
                 <div class="price-value">4500 ₽</div>
                 <div class="price-note">за один индивидуальный трек</div>
               </div>
               <div class="price-meta">
-                Готово в течение 1 дня после получения вашей истории. Трек отправлю
+                Готово в течение 1 дня после получения вашей истории. Трек отправляется
                 на почту или в Telegram в удобном формате.
-              </div>
-            </div>
-            <div class="price-side">
-              <div class="price-chip">
-                <span>Доп. опции:</span>
-                <span>голос мамы/папы +1000 ₽</span>
-                <span>·</span>
-                <span>релиз на Яндекс Музыке +1000 ₽</span>
               </div>
               <div class="price-side-cta">
                 <button class="btn btn-primary" onclick="scrollToOrder()">
@@ -427,6 +496,13 @@
                 </button>
               </div>
             </div>
+          </div>
+
+          <div class="price-chip" style="margin-top: 12px;">
+            <span>Доп. опции:</span>
+            <span>голос мамы/папы +1000 ₽</span>
+            <span>·</span>
+            <span>релиз на Яндекс Музыке +1000 ₽</span>
           </div>
         </div>
       </section>
@@ -502,8 +578,8 @@
                         <div>
                           <div class="checkbox-label-main">Добавить голос мамы или папы +1000 ₽</div>
                           <div class="checkbox-label-sub">
-                            Я вышлю вам короткие подсказки, как записать строки на телефон — и аккуратно
-                            впишу голос в трек.
+                            Вы получите короткие подсказки, как записать строки на телефон — голос аккуратно
+                            впишется в трек.
                           </div>
                         </div>
                       </div>
@@ -587,133 +663,98 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="order-extra">
-            <div class="order-extra-inner">
-              <div class="meditations-block" id="meditations">
-                <div>
-                  <div class="meditations-title">Готовые медитации под каждый случай</div>
-                  <div class="meditations-text">
-                    Коллекция уже записанных медитаций для детей и подростков: перед сном,
-                    после ссоры, перед школой, при тревоге и не только.
-                  </div>
-                </div>
-                <div>
-                  <button class="btn btn-secondary" onclick="openTelegramGroup()">
-                    Перейти в Telegram-группу
-                  </button>
-                  <div style="font-size: 11px; color: var(--text-soft); margin-top: 4px;">
-                    Доступ к новым медитациям каждую неделю.
-                  </div>
-                </div>
+      <section class="section" id="trust">
+        <div class="container">
+          <div class="order-extra-inner">
+            <div>
+              <div class="section-kicker" style="margin-bottom: 12px;">
+                <span class="section-kicker-dot"></span>
+                <span>Доверие</span>
               </div>
+              <h3 style="font-size: 18px; margin-bottom: 8px;">Что говорят родители</h3>
+              <p style="font-size: 13px; color: var(--text-soft); margin-bottom: 10px;">
+                Отрывки отзывов — часть текстов и голосовых, которые мне присылают после прослушивания.
+              </p>
 
+              <div class="reviews-strip">
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="review-avatar">М</div>
+                    <div>
+                      <div class="review-name">Мария, мама Лизы (9 лет)</div>
+                      <div class="review-meta">песня ко дню рождения</div>
+                    </div>
+                  </div>
+                  <p class="review-text">
+                    Лиза слушала песню три раза подряд и всё время спрашивала:
+                    «Мам, а это ты про меня написала?». Мама плакала под припев.
+                  </p>
+                  <audio controls class="review-audio">
+                    <source src="demo-pop.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио.
+                  </audio>
+                </article>
+
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div>
+                      <div class="review-name">Алексей, папа Саши (7 лет)</div>
+                      <div class="review-meta">медитация на засыпание</div>
+                    </div>
+                  </div>
+                  <p class="review-text">
+                    Раньше мы по часу укладывались, теперь — включаем «космическую»
+                    медитацию, и он засыпает к середине. Спрашивает: «Пап, а включишь мою?».
+                  </p>
+                  <audio controls class="review-audio">
+                    <source src="demo-meditation.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио.
+                  </audio>
+                </article>
+
+                <article class="review-card">
+                  <div class="review-header">
+                    <div class="review-avatar">Н</div>
+                    <div>
+                      <div class="review-name">Наталья, мама подростка (14 лет)</div>
+                      <div class="review-meta">поддерживающая песня</div>
+                    </div>
+                  </div>
+                  <p class="review-text">
+                    После песни сын впервые сам сказал, что понимает:
+                    мама поддерживает его, даже когда ругается. Это бесценно.
+                  </p>
+                  <audio controls class="review-audio">
+                    <source src="demo-ballad.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио.
+                  </audio>
+                </article>
+              </div>
+            </div>
+
+            <div class="meditations-block" id="meditations" style="margin-top: 24px;">
               <div>
-                <div class="section-kicker" style="margin-bottom: 12px;">
-                  <span class="section-kicker-dot"></span>
-                  <span>Доверие</span>
-                </div>
-                <h3 style="font-size: 18px; margin-bottom: 8px;">Что говорят родители</h3>
-                <p style="font-size: 13px; color: var(--text-soft); margin-bottom: 10px;">
-                  Отрывки отзывов — часть текстов и голосовых, которые мне присылают после прослушивания.
-                </p>
-
-                <div class="reviews-strip">
-                  <article class="review-card">
-                    <div class="review-header">
-                      <div class="review-avatar">М</div>
-                      <div>
-                        <div class="review-name">Мария, мама Лизы (9 лет)</div>
-                        <div class="review-meta">песня ко дню рождения</div>
-                      </div>
-                    </div>
-                    <p class="review-text">
-                      Лиза слушала песню три раза подряд и всё время спрашивала:
-                      «Мам, а это ты про меня написала?». Я сама плакала под припев.
-                    </p>
-                    <div class="review-audio-pill">
-                      ▶️ <span>Мини‑отзыв в аудио</span>
-                    </div>
-                  </article>
-
-                  <article class="review-card">
-                    <div class="review-header">
-                      <div class="review-avatar">А</div>
-                      <div>
-                        <div class="review-name">Алексей, папа Саши (7 лет)</div>
-                        <div class="review-meta">медитация на засыпание</div>
-                      </div>
-                    </div>
-                    <p class="review-text">
-                      Раньше мы по часу укладывались, теперь — включаем «космическую»
-                      медитацию, и он засыпает к середине. Спрашивает: «Пап, а включишь мою?».
-                    </p>
-                    <div class="review-audio-pill">
-                      ♫ <span>Фрагмент медитации</span>
-                    </div>
-                  </article>
-
-                  <article class="review-card">
-                    <div class="review-header">
-                      <div class="review-avatar">Н</div>
-                      <div>
-                        <div class="review-name">Наталья, мама подростка (14 лет)</div>
-                        <div class="review-meta">поддерживающая песня</div>
-                      </div>
-                    </div>
-                    <p class="review-text">
-                      После песни сын впервые сам сказал: «Мам, я понял, что ты меня
-                      поддерживаешь, даже когда ругаешься». Это бесценно.
-                    </p>
-                    <div class="review-audio-pill">
-                      ▶️ <span>Голосовое «спасибо»</span>
-                    </div>
-                  </article>
+                <div class="meditations-title">Готовые медитации под каждый случай</div>
+                <div class="meditations-text">
+                  Коллекция уже записанных медитаций для детей и подростков: перед сном,
+                  после ссоры, перед школой, при тревоге и не только.
                 </div>
               </div>
-
-              <div class="alt-block">
-                <div>
-                  <div class="alt-title">Хотите песню не для ребёнка?</div>
-                  <div class="alt-text">
-                    Я также создаю треки для мужей, друзей, родителей и важных событий:
-                    свадьбы, юбилеи, признания.
-                  </div>
-
-                  <div class="alt-avatars">
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">👨</div>
-                      <div class="alt-avatar-label">Мужу / партнёру</div>
-                    </div>
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">👩</div>
-                      <div class="alt-avatar-label">Жене / подруге</div>
-                    </div>
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">🧓</div>
-                      <div class="alt-avatar-label">Бабушке</div>
-                    </div>
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">👴</div>
-                      <div class="alt-avatar-label">Дедушке</div>
-                    </div>
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">👫</div>
-                      <div class="alt-avatar-label">Друзьям</div>
-                    </div>
-                    <div class="alt-avatar-card">
-                      <div class="alt-avatar-icon">🤝</div>
-                      <div class="alt-avatar-label">Коллеге / команде</div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <button class="btn btn-secondary">
-                    Подробнее о взрослой версии
-                  </button>
+              <div>
+                <button class="btn btn-secondary" onclick="openTelegramGroup()">
+                  Перейти в Telegram-группу
+                </button>
+                <div style="font-size: 11px; color: var(--text-soft); margin-top: 4px;">
+                  Доступ к новым медитациям каждую неделю.
                 </div>
               </div>
             </div>
+
+            <!-- alt-block перенесён выше, после карусели -->
           </div>
         </div>
       </section>

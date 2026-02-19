@@ -52,6 +52,85 @@ a {
   flex-direction: column;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 250, 242, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.site-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-logo-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.site-logo-subtitle {
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-nav-btn {
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 7px 14px;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.site-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px);
+}
+
+.site-nav-btn-primary {
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(255, 152, 75, 0.35);
+}
+
+.site-nav-btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(255, 152, 75, 0.45);
+}
+
 .container {
   width: 100%;
   max-width: 1120px;
@@ -324,6 +403,11 @@ a {
   border-radius: 18px;
 }
 
+.section-alt-top {
+  padding-top: 32px;
+  padding-bottom: 0;
+}
+
 .hero-strip-track {
   display: flex;
   gap: 14px;
@@ -393,11 +477,26 @@ a {
 .why-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: var(--radius-md);
-  padding: 16px 16px 18px;
+  padding: 12px 12px 16px;
   border: 1px solid var(--border-soft);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
   position: relative;
   overflow: hidden;
+}
+
+.why-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.why-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .why-icon {
@@ -431,7 +530,7 @@ a {
 
 .product-card {
   background: var(--bg-card);
-  border-radius: var(--radius-lg);
+  border-radius: 20px;
   padding: 22px 20px 20px;
   border: 1px solid var(--border-soft);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
@@ -528,19 +627,23 @@ audio {
   box-shadow: 0 18px 40px rgba(255, 152, 75, 0.36);
 }
 
-.price-main-label {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.7;
-  margin-bottom: 4px;
+.price-card-left {
+  align-self: stretch;
+}
+
+.price-card-right {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .price-row {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .price-value {
@@ -558,10 +661,10 @@ audio {
   opacity: 0.85;
 }
 
-.price-side {
-  justify-self: flex-end;
-  text-align: right;
-  font-size: 12px;
+.product-card-in-price {
+  margin-top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .price-side-cta {
@@ -819,14 +922,16 @@ select:focus {
 }
 
 .review-card {
-  min-width: 230px;
-  max-width: 260px;
+  min-width: 260px;
+  flex: 0 0 calc((100% - 28px) / 3);
   background: var(--bg-card);
   border-radius: 20px;
   padding: 14px 14px 16px;
   border: 1px solid var(--border-soft);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-header {
@@ -863,15 +968,9 @@ select:focus {
   margin-bottom: 8px;
 }
 
-.review-audio-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 9px;
-  border-radius: var(--radius-pill);
-  background: rgba(0, 0, 0, 0.04);
-  font-size: 11px;
-  color: var(--text-soft);
+.review-audio {
+  width: 100%;
+  margin-top: auto;
 }
 
 .alt-block {
@@ -999,6 +1098,12 @@ select:focus {
 @media (max-width: 768px) {
   .section {
     padding: 48px 0;
+  }
+  .site-header-inner {
+    padding: 8px 0;
+  }
+  .site-logo-subtitle {
+    display: none;
   }
   .why-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
