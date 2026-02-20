@@ -70,5 +70,30 @@ function handleFakeSubmit(event) {
   alert("Здесь будет переход к оплате или отправка формы. Сейчас это демо.");
 }
 
-document.addEventListener("DOMContentLoaded", updatePrice);
+document.addEventListener("DOMContentLoaded", function () {
+  updatePrice();
+
+  const decorEls = document.querySelectorAll(".section-title-decor");
+  if (!decorEls.length) return;
+
+  const updateDecorParallax = () => {
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+
+    decorEls.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const elementCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = elementCenter - viewportHeight / 2;
+
+      const factorAttr = parseFloat(el.dataset.parallax);
+      const intensity = !Number.isNaN(factorAttr) ? factorAttr : 0.06;
+      const offset = -distanceFromCenter * intensity;
+
+      el.style.setProperty("--decor-parallax", `${offset}px`);
+    });
+  };
+
+  updateDecorParallax();
+  window.addEventListener("scroll", updateDecorParallax, { passive: true });
+  window.addEventListener("resize", updateDecorParallax);
+});
 

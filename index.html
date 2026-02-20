@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Закажите песню или медитацию для близкого человека</title>
+  <title>Создайте песню на заказ! — LifeSing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Индивидуальные песни и медитации — для ребёнка или близкого человека. Подарок по вашему сценарию, который остаётся навсегда."
+    content="Подарите уникальную песню для особенного человека. Индивидуальные песни на заказ по вашему сценарию."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +25,20 @@
             <img src="./image/logo.svg" alt="LifeSing" class="site-logo-img" />
             <div class="site-logo-text">
               <div class="site-logo-title">LifeSing</div>
-              <div class="site-logo-subtitle">песни и медитации для детей</div>
             </div>
           </div>
           <nav class="site-nav" aria-label="Основное меню">
+            <button class="site-nav-btn" type="button" onclick="scrollToSection('about')">
+              О нас
+            </button>
             <button class="site-nav-btn" type="button" onclick="scrollToSection('demos')">
               Примеры
             </button>
-            <button class="site-nav-btn" type="button" onclick="scrollToSection('why')">
-              Зачем это нужно
-            </button>
-            <button class="site-nav-btn" type="button" onclick="scrollToSection('price')">
-              Стоимость
+            <button class="site-nav-btn" type="button" onclick="scrollToSection('trust')">
+              Отзывы
             </button>
             <button class="site-nav-btn site-nav-btn-primary" type="button" onclick="scrollToSection('order')">
-              Заказ
+              Заказать песню
             </button>
           </nav>
         </div>
@@ -47,514 +46,520 @@
     </header>
 
     <header class="hero" id="top">
-      <div class="container">
-        <div class="hero-inner">
-          <div>
-            <div class="hero-label">
-              <span class="hero-label-badge">Новый формат подарка</span>
-              <span>Для близкого человека — по вашему сценарию</span>
-            </div>
+      <div class="hero-inner-wrapper">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-content">
             <h1 class="hero-title">
-              Закажите песню<br>или медитацию<br>для близкого человека
+              Создайте песню<br>на <span class="hero-title-accent">заказ!</span>
             </h1>
-            <p class="hero-subtitle">
-              Подарите эмоцию, которая трогает до глубины души — личный голос и история,
-              которые останутся навсегда.
-            </p>
-
-            <div class="hero-cta-row">
-              <button class="btn btn-primary" onclick="scrollToOrder()">
-                Создать трек
-              </button>
-              <button class="btn btn-secondary" onclick="scrollToDemos()">
-                Слушать примеры
-              </button>
-            </div>
-
-            <p class="hero-note">
-              Персональные песни и медитации, которые хочется включать снова и снова.
-            </p>
-
-            <div class="hero-micro">
-              <div class="hero-micro-item">
-                <span class="dot"></span> Готово за 1 день
-              </div>
-              <div class="hero-micro-item">
-                <span class="dot"></span> 4500 ₽ — фиксированная стоимость
-              </div>
-              <div class="hero-micro-item">
-                <span class="dot"></span> Отправка на почту или в Telegram
+              <p class="hero-subtitle">
+                Подарите уникальную песню для особенного человека
+              </p>
+              <div class="hero-cta-row">
+                <button class="btn btn-primary" onclick="scrollToOrder()">
+                  Заказать песню
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="hero-strip">
-          <div class="hero-strip-track">
-            <div class="hero-strip-group">
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/husband-wife-hugging-nature_23-2148349766.jpg"
-                    alt="Муж и жена обнимаются на природе"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Мужу / партнёру</div>
-                <div class="hero-strip-desc">Персональная история для него</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/portrait-sensual-caucasian-curlyhaired-brunette-woman-holding-flower-hand-posing-alone-beautiful-lady-with-romantic-mood-spending-vacation-hotel-room-stylish-sleepwear-beauty-appearance_8353-12609.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Женский портрет с тёплым настроением"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Жене / подруге</div>
-                <div class="hero-strip-desc">Трек, созданный для неё</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://s11.stc.all.kpcdn.net/woman/wp-content/uploads/2023/08/shutterstock_1065023912-1.jpg"
-                    alt="Бабушка улыбается"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Бабушке</div>
-                <div class="hero-strip-desc">Личный подарок в музыке</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/portrait-wise-person_52683-100915.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Портрет дедушки"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Дедушке</div>
-                <div class="hero-strip-desc">Особенный трек для него</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/beautiful-women-posing-cute-way_23-2148650379.jpg?semt=ais_user_personalization&w=740&q=80"
-                    alt="Подруги улыбаются вместе"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Друзьям</div>
-                <div class="hero-strip-desc">Ваша общая история</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                    alt="Коллеги и команда"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Коллеге / команде</div>
-                <div class="hero-strip-desc">Музыкальный подарок для команды</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Годовщина"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На годовщину</div>
-                <div class="hero-strip-desc">История вашего пути</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="День рождения"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На день рождения</div>
-                <div class="hero-strip-desc">Только для него / неё</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Свадьба"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На свадьбу</div>
-                <div class="hero-strip-desc">Трек для важного момента</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Признание в любви"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Признание в любви</div>
-                <div class="hero-strip-desc">Слова, которые хочется сохранить</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-            </div>
-            <div class="hero-strip-group">
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/husband-wife-hugging-nature_23-2148349766.jpg"
-                    alt="Муж и жена обнимаются на природе"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Мужу / партнёру</div>
-                <div class="hero-strip-desc">Персональная история для него</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/portrait-sensual-caucasian-curlyhaired-brunette-woman-holding-flower-hand-posing-alone-beautiful-lady-with-romantic-mood-spending-vacation-hotel-room-stylish-sleepwear-beauty-appearance_8353-12609.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Женский портрет с тёплым настроением"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Жене / подруге</div>
-                <div class="hero-strip-desc">Трек, созданный для неё</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://s11.stc.all.kpcdn.net/woman/wp-content/uploads/2023/08/shutterstock_1065023912-1.jpg"
-                    alt="Бабушка улыбается"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Бабушке</div>
-                <div class="hero-strip-desc">Личный подарок в музыке</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/portrait-wise-person_52683-100915.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Портрет дедушки"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Дедушке</div>
-                <div class="hero-strip-desc">Особенный трек для него</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://img.freepik.com/free-photo/beautiful-women-posing-cute-way_23-2148650379.jpg?semt=ais_user_personalization&w=740&q=80"
-                    alt="Подруги улыбаются вместе"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Друзьям</div>
-                <div class="hero-strip-desc">Ваша общая история</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                    alt="Коллеги и команда"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Коллеге / команде</div>
-                <div class="hero-strip-desc">Музыкальный подарок для команды</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Годовщина"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На годовщину</div>
-                <div class="hero-strip-desc">История вашего пути</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="День рождения"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На день рождения</div>
-                <div class="hero-strip-desc">Только для него / неё</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Свадьба"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">На свадьбу</div>
-                <div class="hero-strip-desc">Трек для важного момента</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
-              <article class="hero-strip-card">
-                <div class="hero-strip-placeholder">
-                  <img
-                    class="hero-strip-img"
-                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
-                    alt="Признание в любви"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="hero-strip-tag">Признание в любви</div>
-                <div class="hero-strip-desc">Слова, которые хочется сохранить</div>
-                <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
-                  Заказать →
-                </button>
-              </article>
+            <div class="hero-image">
+              <img
+                src="./image/kid-header.png"
+                alt="Создание персональной песни"
+                loading="eager"
+                class="hero-img"
+              />
             </div>
           </div>
         </div>
       </div>
     </header>
 
+    <section class="hero-strip-section">
+      <div class="container">
+        <div class="hero-strip">
+          <div class="hero-strip-track">
+            <div class="hero-strip-group">
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/husband-wife-hugging-nature_23-2148349766.jpg"
+                    alt="Муж и жена обнимаются на природе"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">любимого</span></div>
+                  <div class="hero-strip-desc">Персональная история для него</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/portrait-sensual-caucasian-curlyhaired-brunette-woman-holding-flower-hand-posing-alone-beautiful-lady-with-romantic-mood-spending-vacation-hotel-room-stylish-sleepwear-beauty-appearance_8353-12609.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Женский портрет с тёплым настроением"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">мамы</span></div>
+                  <div class="hero-strip-desc">Трек, созданный для неё</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://s11.stc.all.kpcdn.net/woman/wp-content/uploads/2023/08/shutterstock_1065023912-1.jpg"
+                    alt="Бабушка улыбается"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">бабушки</span></div>
+                  <div class="hero-strip-desc">Личный подарок в музыке</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/portrait-wise-person_52683-100915.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Портрет дедушки"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">дедушки</span></div>
+                  <div class="hero-strip-desc">Особенный трек для него</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/beautiful-women-posing-cute-way_23-2148650379.jpg?semt=ais_user_personalization&w=740&q=80"
+                    alt="Подруги улыбаются вместе"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">друзей</span></div>
+                  <div class="hero-strip-desc">Ваша общая история</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                    alt="Коллеги и команда"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">корпоратива</span></div>
+                  <div class="hero-strip-desc">Подарок для команды</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Годовщина"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">годовщины</span></div>
+                  <div class="hero-strip-desc">История вашего пути</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="День рождения"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">дня рождения</span></div>
+                  <div class="hero-strip-desc">Только для него / неё</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Свадьба"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">свадьбы</span></div>
+                  <div class="hero-strip-desc">Трек для важного момента</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Признание в любви"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">признания</span></div>
+                  <div class="hero-strip-desc">Слова, которые хочется сохранить</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="hero-strip-group">
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/husband-wife-hugging-nature_23-2148349766.jpg"
+                    alt="Муж и жена обнимаются на природе"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">любимого</span></div>
+                  <div class="hero-strip-desc">Персональная история для него</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/portrait-sensual-caucasian-curlyhaired-brunette-woman-holding-flower-hand-posing-alone-beautiful-lady-with-romantic-mood-spending-vacation-hotel-room-stylish-sleepwear-beauty-appearance_8353-12609.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Женский портрет с тёплым настроением"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">мамы</span></div>
+                  <div class="hero-strip-desc">Трек, созданный для неё</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://s11.stc.all.kpcdn.net/woman/wp-content/uploads/2023/08/shutterstock_1065023912-1.jpg"
+                    alt="Бабушка улыбается"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">бабушки</span></div>
+                  <div class="hero-strip-desc">Личный подарок в музыке</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/portrait-wise-person_52683-100915.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Портрет дедушки"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">дедушки</span></div>
+                  <div class="hero-strip-desc">Особенный трек для него</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://img.freepik.com/free-photo/beautiful-women-posing-cute-way_23-2148650379.jpg?semt=ais_user_personalization&w=740&q=80"
+                    alt="Подруги улыбаются вместе"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">друзей</span></div>
+                  <div class="hero-strip-desc">Ваша общая история</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
+                    alt="Коллеги и команда"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">корпоратива</span></div>
+                  <div class="hero-strip-desc">Подарок для команды</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Годовщина"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">годовщины</span></div>
+                  <div class="hero-strip-desc">История вашего пути</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="День рождения"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">дня рождения</span></div>
+                  <div class="hero-strip-desc">Только для него / неё</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Свадьба"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">свадьбы</span></div>
+                  <div class="hero-strip-desc">Трек для важного момента</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+              <article class="hero-strip-card">
+                <div class="hero-strip-image">
+                  <img
+                    class="hero-strip-img"
+                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+                    alt="Признание в любви"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="hero-strip-content">
+                  <div class="hero-strip-tag">Песня для <span class="hero-strip-highlight">признания</span></div>
+                  <div class="hero-strip-desc">Слова, которые хочется сохранить</div>
+                  <button class="hero-strip-cta" type="button" onclick="scrollToOrder()">
+                    Заказать
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <main>
-      <section class="section" id="demos">
+      <section class="section" id="how-it-works">
         <div class="container">
           <div class="section-header">
-            <div class="section-kicker">
-              <span class="section-kicker-dot"></span>
-              <span>Послушать перед заказом</span>
-            </div>
-            <h2 class="section-title">Примеры песен и медитаций</h2>
-            <p class="section-subtitle">
-              Короткие фрагменты в разных стилях. Выберите то настроение, которое
-              ближе вашему ребёнку.
-            </p>
+            <h2 class="section-title section-title--how">
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--left-main"
+                data-parallax="0.08"
+              >
+                ❤
+              </span>
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--left-mini"
+                data-parallax="0.03"
+              >
+                ❤
+              </span>
+              Как это работает?
+              <span
+                class="section-title-decor section-title-decor--note-right"
+                data-parallax="-0.02"
+              >
+                ♪
+              </span>
+            </h2>
           </div>
 
-          <div class="demo-grid">
-            <article class="demo-card">
-              <div class="demo-title">Песня «Смелое сердце»</div>
-              <div class="demo-meta">Поп / мотивация · 0:35 фрагмент</div>
-              <audio controls>
-                <source src="demo-pop.mp3" type="audio/mpeg">
-                Ваш браузер не поддерживает аудио.
-              </audio>
+          <div class="how-it-works-grid">
+            <article class="how-step">
+              <div class="how-step-number">1</div>
+              <div class="how-step-icon">
+                <img src="image/step-1.png" alt="Форма заявки" class="how-step-icon-img" loading="lazy" />
+              </div>
+              <h3 class="how-step-title">Оставьте заявку</h3>
+              <p class="how-step-desc">Опишите ваши идеи и пожелания</p>
             </article>
 
-            <article class="demo-card">
-              <div class="demo-title">Медитация «Тихий космос»</div>
-              <div class="demo-meta">Перед сном · 0:40 фрагмент</div>
-              <audio controls>
-                <source src="demo-meditation.mp3" type="audio/mpeg">
-                Ваш браузер не поддерживает аудио.
-              </audio>
+            <article class="how-step">
+              <div class="how-step-number">2</div>
+              <div class="how-step-icon">
+                <img src="image/step-2.png" alt="Создание песни" class="how-step-icon-img" loading="lazy" />
+              </div>
+              <h3 class="how-step-title">Напишем песню</h3>
+              <p class="how-step-desc">Создадим текст и музыку</p>
             </article>
 
-            <article class="demo-card">
-              <div class="demo-title">Песня «Дом, где тебя ждут»</div>
-              <div class="demo-meta">Баллада / поддержка · 0:30 фрагмент</div>
-              <audio controls>
-                <source src="demo-ballad.mp3" type="audio/mpeg">
-                Ваш браузер не поддерживает аудио.
-              </audio>
+            <article class="how-step">
+              <div class="how-step-number">3</div>
+              <div class="how-step-icon">
+                <img src="image/step-3.png" alt="Запись и аранжировка" class="how-step-icon-img" loading="lazy" />
+              </div>
+              <h3 class="how-step-title">Запись и аранжировка</h3>
+              <p class="how-step-desc">Профессиональная студийная запись</p>
             </article>
-          </div>
 
-          <div style="margin-top: 16px; font-size: 12px; color: var(--text-soft);">
-            <span class="pill-tag">
-              Если хотите пример в другом стиле — просто напишите об этом в комментарии к заказу.
-            </span>
+            <article class="how-step">
+              <div class="how-step-number">4</div>
+              <div class="how-step-icon">
+                <img src="image/step-4.png" alt="Готовый подарок" class="how-step-icon-img" loading="lazy" />
+              </div>
+              <h3 class="how-step-title">Дарите и радуйтесь!</h3>
+              <p class="how-step-desc">Готовая песня для ваших близких</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="why">
+      <section class="section" id="demos">
         <div class="container">
           <div class="section-header">
-            <div class="section-kicker">
-              <span class="section-kicker-dot"></span>
-              <span>Когда это особенно важно</span>
-            </div>
-            <h2 class="section-title">Зачем это нужно</h2>
-            <p class="section-subtitle">
-              Это не просто трек — это голос, который поддерживает, успокаивает,
-              вдохновляет и говорит самые важные слова.
-            </p>
+            <h2 class="section-title section-title--demos">
+              <span
+                class="section-title-decor section-title-decor--note-left"
+                data-parallax="0.04"
+              >
+                ♪
+              </span>
+              Примеры наших песен
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--right-main"
+                data-parallax="-0.07"
+              >
+                ❤
+              </span>
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--right-mini"
+                data-parallax="-0.03"
+              >
+                ❤
+              </span>
+            </h2>
           </div>
 
-          <div class="why-grid">
-            <article class="why-card">
-              <div class="why-image">
+          <div class="demo-grid">
+            <article class="demo-card">
+              <div class="demo-image">
                 <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
+                  src="image/daughter.png"
+                  alt="Песня для дочки"
                   loading="lazy"
                 />
               </div>
-              <h3 class="why-title">Когда ребёнок грустит или устал</h3>
-              <p class="why-text">
-                Тёплые слова в музыке помогают снять напряжение и дают ощущение,
-                что рядом есть близкий взрослый — даже если его нет в комнате.
-              </p>
+              <h3 class="demo-tag">
+                Песня для <span class="demo-name">дочки</span>
+              </h3>
+              <div class="demo-player">
+                <button class="demo-play-btn">▶</button>
+                <div class="demo-progress">
+                  <div class="demo-progress-bar"></div>
+                </div>
+                <div class="demo-duration">0:53</div>
+              </div>
             </article>
 
-            <article class="why-card">
-              <div class="why-image">
+            <article class="demo-card">
+              <div class="demo-image">
                 <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
+                  src="image/mom.png"
+                  alt="Песня для мамы"
                   loading="lazy"
                 />
               </div>
-              <h3 class="why-title">Когда его обидели</h3>
-              <p class="why-text">
-                Личная песня или медитация возвращает ощущение безопасности
-                и ценности — мягко и без нравоучений.
-              </p>
-            </article>
-
-            <article class="why-card">
-              <div class="why-image">
-                <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
-                  loading="lazy"
-                />
+              <h3 class="demo-tag">
+                Песня для <span class="demo-name">мамы</span>
+              </h3>
+              <div class="demo-player">
+                <button class="demo-play-btn">▶</button>
+                <div class="demo-progress">
+                  <div class="demo-progress-bar"></div>
+                </div>
+                <div class="demo-duration">1:12</div>
               </div>
-              <h3 class="why-title">Когда скучает по маме или папе</h3>
-              <p class="why-text">
-                Включить трек — как позвонить вам. Голос в наушниках обнимает,
-                даже если вы далеко.
-              </p>
-            </article>
-
-            <article class="why-card">
-              <div class="why-image">
-                <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="why-title">Чтобы мотивировать учиться</h3>
-              <p class="why-text">
-                Через песни проще говорить о целях, вере в ребёнка и его талантах,
-                чем через длинные разговоры.
-              </p>
-            </article>
-
-            <article class="why-card">
-              <div class="why-image">
-                <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="why-title">Чтобы успокоить перед сном</h3>
-              <p class="why-text">
-                Медитация звучит как сказка перед сном: плавный голос, мягкая музыка,
-                понятные образы.
-              </p>
-            </article>
-
-            <article class="why-card">
-              <div class="why-image">
-                <img
-                  src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                  alt="Семейный момент"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="why-title">Если хочется донести важные слова</h3>
-              <p class="why-text">
-                Передать «мы тобой гордимся», «ты не один» и «мы всегда рядом»
-                в формате, который ребёнок точно услышит.
-              </p>
             </article>
           </div>
         </div>
@@ -569,7 +574,7 @@
             </div>
             <h2 class="section-title">Стоимость и скорость</h2>
             <p class="section-subtitle">
-              Расскажите о ребёнке и ситуации, а мы превратим это в трек, который
+              Расскажите о человеке и ситуации, а мы превратим это в трек, который
               хочется переслушивать.
             </p>
           </div>
@@ -579,26 +584,26 @@
               <article class="product-card product-card-in-price">
                 <div class="product-label">
                   <span class="chip-icon">♪</span>
-                  <span>Песня для ребёнка</span>
+                  <span>Персональная песня</span>
                   <span class="product-label-pill">эмоциональный подарок</span>
                 </div>
-                <h3 class="product-title">Индивидуальная семейная песня</h3>
+                <h3 class="product-title">Индивидуальная песня на заказ</h3>
                 <ul class="product-list">
                   <li>
                     <span class="product-bullet"></span>
-                    <span>Сюжет и слова, написанные под вашего ребёнка и вашу историю.</span>
+                    <span>Сюжет и слова, написанные под конкретного человека и вашу историю.</span>
                   </li>
                   <li>
                   <span class="product-bullet"></span>
-                  <span>Можно добавить голос мамы или папы — несколько строк, которые прозвучат в треке.</span>
+                  <span>Можно добавить ваш голос — несколько строк, которые прозвучат в треке.</span>
                   </li>
                   <li>
                     <span class="product-bullet"></span>
-                    <span>Трек останется с ним навсегда — как аудио-дневник вашей любви.</span>
+                    <span>Трек останется навсегда — как аудио-дневник ваших чувств.</span>
                   </li>
                   <li>
                     <span class="product-bullet"></span>
-                    <span>Такие песни сильнее любых длинных разговоров и «педагогики».</span>
+                    <span>Такие песни сильнее любых слов и подарков.</span>
                   </li>
                 </ul>
               </article>
@@ -608,21 +613,21 @@
                 <div class="price-value">4500 ₽</div>
                 <div class="price-note">за один индивидуальный трек</div>
               </div>
-              <div class="price-meta">
-                Готово в течение 1 дня после получения вашей истории. Трек отправляется
-                на почту или в Telegram в удобном формате.
-              </div>
               <div class="price-side-cta">
                 <button class="btn btn-primary" onclick="scrollToOrder()">
                   Перейти к конструктору заказа
                 </button>
+              </div>
+              <div class="price-meta">
+                Готово в течение 1 дня после получения вашей истории. Трек отправляется
+                на почту или в Telegram в удобном формате.
               </div>
             </div>
           </div>
 
           <div class="price-chip" style="margin-top: 12px;">
             <span>Доп. опции:</span>
-            <span>голос мамы/папы +1000 ₽</span>
+            <span>ваш голос в треке +1000 ₽</span>
             <span>·</span>
             <span>релиз на Яндекс Музыке +1000 ₽</span>
           </div>
@@ -631,15 +636,35 @@
 
       <section class="section" id="order">
         <div class="container">
-          <div class="section-header" style="margin-bottom: 18px;">
+          <div class="section-header section-header--order" style="margin-bottom: 18px;">
             <div class="section-kicker">
               <span class="section-kicker-dot"></span>
               <span>Создайте трек на одной странице</span>
             </div>
-            <h2 class="section-title">Конструктор заказа</h2>
+            <h2 class="section-title section-title--order">
+              <span
+                class="section-title-decor section-title-decor--note-left"
+                data-parallax="0.05"
+              >
+                ♪
+              </span>
+              Конструктор заказа
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--right-main"
+                data-parallax="-0.06"
+              >
+                ❤
+              </span>
+              <span
+                class="section-title-decor section-title-decor--heart section-title-decor--right-mini"
+                data-parallax="-0.025"
+              >
+                ❤
+              </span>
+            </h2>
             <p class="section-subtitle">
-              Заполните несколько полей — и у ребёнка появится личная песня
-              или медитация, о которой он будет вспоминать много лет.
+              Заполните несколько полей — и появится личная песня,
+              о которой будут вспоминать много лет.
             </p>
           </div>
 
@@ -649,7 +674,7 @@
                 <div>
                   <div class="order-title">Расскажите о будущем треке</div>
                   <div class="order-subtitle">
-                    Чем точнее вы опишете ребёнка и ситуацию, тем более «живой»
+                    Чем точнее вы опишете человека и ситуацию, тем более «живой»
                     получится история.
                   </div>
                 </div>
@@ -660,22 +685,20 @@
                       <label class="form-label">Что вы хотите создать?</label>
                       <select name="type" required>
                         <option value="song">Песня</option>
-                        <option value="meditation">Медитация</option>
-                        <option value="song-meditation">И песня, и медитация (обсудим отдельно)</option>
                       </select>
                     </div>
 
                     <div class="form-field">
                       <label class="form-label">Название трека</label>
-                      <input type="text" name="title" placeholder="Например: «Смелое сердце Лизы»">
+                      <input type="text" name="title" placeholder="Например: «Песня для Марии»">
                     </div>
 
                     <div class="form-field">
                       <label class="form-label">
                         Событие
-                        <small>день рождения, переезд, сложный период…</small>
+                        <small>день рождения, годовщина, признание в любви…</small>
                       </label>
-                      <input type="text" name="event" placeholder="Например: 10‑летие, адаптация в новой школе">
+                      <input type="text" name="event" placeholder="Например: день рождения, годовщина">
                     </div>
 
                     <div class="form-field">
@@ -689,16 +712,16 @@
                     <div class="form-field full">
                       <label class="form-label">
                         Краткое описание
-                        <small>личные слова, моменты, особенности ребёнка</small>
+                        <small>личные слова, моменты, особенности человека</small>
                       </label>
-                      <textarea name="description" placeholder="Что важно сказать ребёнку? Какие фразы или моменты точно должны прозвучать?"></textarea>
+                      <textarea name="description" placeholder="Что важно сказать? Какие фразы или моменты точно должны прозвучать?"></textarea>
                     </div>
 
                     <div class="form-field full">
                       <div class="checkbox-row">
                         <input type="checkbox" id="voiceParent" name="voiceParent" onchange="updatePrice()" />
                         <div>
-                          <div class="checkbox-label-main">Добавить голос мамы или папы +1000 ₽</div>
+                          <div class="checkbox-label-main">Добавить ваш голос +1000 ₽</div>
                           <div class="checkbox-label-sub">
                             Вы получите короткие подсказки, как записать строки на телефон — голос аккуратно
                             впишется в трек.
@@ -713,7 +736,7 @@
                         <div>
                           <div class="checkbox-label-main">Выложить трек на Яндекс Музыке +1000 ₽</div>
                           <div class="checkbox-label-sub">
-                            Оформлю релиз под вашим именем, чтобы у ребёнка был «настоящий» трек на платформе.
+                            Оформлю релиз под вашим именем, чтобы был «настоящий» трек на платформе.
                           </div>
                         </div>
                       </div>
@@ -765,25 +788,6 @@
               </div>
             </div>
 
-            <div class="order-visual">
-              <div class="order-visual-card">
-                <div class="order-visual-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFtaWx5fGVufDB8fDB8fHww"
-                    alt="Семья вместе"
-                    loading="lazy"
-                    class="order-visual-img"
-                  />
-                </div>
-                <div class="order-visual-caption">
-                  <div class="order-visual-tag">Личный трек для вашего ребёнка</div>
-                  <p class="order-visual-text">
-                    Пока вы заполняете конструктор, представьте момент, когда он впервые
-                    нажмёт «play» и услышит историю, записанную только для него.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -796,9 +800,9 @@
                 <span class="section-kicker-dot"></span>
                 <span>Доверие</span>
               </div>
-              <h3 style="font-size: 18px; margin-bottom: 8px;">Что говорят родители</h3>
+              <h3 style="font-size: 18px; margin-bottom: 8px;">Что говорят наши клиенты</h3>
               <p style="font-size: 13px; color: var(--text-soft); margin-bottom: 10px;">
-                Отрывки отзывов — часть текстов и голосовых, которые мне присылают после прослушивания.
+                Отрывки отзывов — часть текстов и голосовых, которые нам присылают после прослушивания.
               </p>
 
               <div class="reviews-strip">
@@ -806,13 +810,13 @@
                   <div class="review-header">
                     <div class="review-avatar">М</div>
                     <div>
-                      <div class="review-name">Мария, мама Лизы (9 лет)</div>
+                      <div class="review-name">Мария</div>
                       <div class="review-meta">песня ко дню рождения</div>
                     </div>
                   </div>
                   <p class="review-text">
-                    Лиза слушала песню три раза подряд и всё время спрашивала:
-                    «Мам, а это ты про меня написала?». Мама плакала под припев.
+                    Заказала песню для мамы на день рождения. Она слушала её три раза подряд
+                    и всё время спрашивала: «Это ты про меня написала?». Плакала от счастья.
                   </p>
                   <audio controls class="review-audio">
                     <source src="demo-pop.mp3" type="audio/mpeg">
@@ -824,13 +828,13 @@
                   <div class="review-header">
                     <div class="review-avatar">А</div>
                     <div>
-                      <div class="review-name">Алексей, папа Саши (7 лет)</div>
-                      <div class="review-meta">медитация на засыпание</div>
+                      <div class="review-name">Алексей</div>
+                      <div class="review-meta">песня для жены</div>
                     </div>
                   </div>
                   <p class="review-text">
-                    Раньше мы по часу укладывались, теперь — включаем «космическую»
-                    медитацию, и он засыпает к середине. Спрашивает: «Пап, а включишь мою?».
+                    Заказал песню для жены на годовщину. Она была в восторге!
+                    Теперь это наш особенный трек, который мы включаем в важные моменты.
                   </p>
                   <audio controls class="review-audio">
                     <source src="demo-meditation.mp3" type="audio/mpeg">
@@ -842,13 +846,13 @@
                   <div class="review-header">
                     <div class="review-avatar">Н</div>
                     <div>
-                      <div class="review-name">Наталья, мама подростка (14 лет)</div>
-                      <div class="review-meta">поддерживающая песня</div>
+                      <div class="review-name">Наталья</div>
+                      <div class="review-meta">песня для подруги</div>
                     </div>
                   </div>
                   <p class="review-text">
-                    После песни сын впервые сам сказал, что понимает:
-                    мама поддерживает его, даже когда ругается. Это бесценно.
+                    Подарила песню лучшей подруге. Она сказала, что это самый трогательный
+                    подарок, который она когда-либо получала. Это бесценно.
                   </p>
                   <audio controls class="review-audio">
                     <source src="demo-ballad.mp3" type="audio/mpeg">
@@ -858,23 +862,6 @@
               </div>
             </div>
 
-            <div class="meditations-block" id="meditations" style="margin-top: 24px;">
-              <div>
-                <div class="meditations-title">Готовые медитации под каждый случай</div>
-                <div class="meditations-text">
-                  Коллекция уже записанных медитаций для детей и подростков: перед сном,
-                  после ссоры, перед школой, при тревоге и не только.
-                </div>
-              </div>
-              <div>
-                <button class="btn btn-secondary" onclick="openTelegramGroup()">
-                  Перейти в Telegram-группу
-                </button>
-                <div style="font-size: 11px; color: var(--text-soft); margin-top: 4px;">
-                  Доступ к новым медитациям каждую неделю.
-                </div>
-              </div>
-            </div>
 
             <!-- alt-block перенесён выше, после карусели -->
           </div>
@@ -888,11 +875,11 @@
           <div class="footer-main">
             <div class="footer-title">Песня остаётся навсегда</div>
             <div class="footer-subtitle">
-              Через год, пять или десять лет ребёнок сможет нажать «play» и снова
-              услышать ваш голос, ваши слова и вашу любовь.
+              Через год, пять или десять лет человек сможет нажать «play» и снова
+              услышать ваши слова и вашу любовь.
             </div>
             <button class="btn btn-primary" onclick="scrollToOrder()">
-              Заказать песню или медитацию
+              Заказать песню
             </button>
             <div class="footer-meta">
               Эмоции меняются, но память о том, что его любят, — нет.
