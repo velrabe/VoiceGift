@@ -506,8 +506,8 @@
               <div class="how-step-icon">
                 <img src="image/step-3.png" alt="Запись и аранжировка" class="how-step-icon-img" loading="lazy" />
               </div>
-              <h3 class="how-step-title">Запись и аранжировка</h3>
-              <p class="how-step-desc">Профессиональная студийная запись</p>
+              <h3 class="how-step-title">Напишем песню</h3>
+              <p class="how-step-desc">Создадим текст по вашему описанию.</p>
             </article>
 
             <article class="how-step">
@@ -515,8 +515,8 @@
               <div class="how-step-icon">
                 <img src="image/step-4.png" alt="Готовый подарок" class="how-step-icon-img" loading="lazy" />
               </div>
-              <h3 class="how-step-title">Дарите и радуйтесь!</h3>
-              <p class="how-step-desc">Готовая песня для ваших близких</p>
+              <h3 class="how-step-title">Создадим музыку</h3>
+              <p class="how-step-desc">Соберём воедино композицию в вашем стиле.</p>
             </article>
           </div>
         </div>
@@ -586,6 +586,46 @@
                   <div class="demo-progress-bar"></div>
                 </div>
                 <div class="demo-duration">1:12</div>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-image">
+                <img
+                  src="image/birthday.png"
+                  alt="Песня на день рождения"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="demo-tag">
+                Песня на <span class="demo-name">день рождения</span>
+              </h3>
+              <div class="demo-player">
+                <button class="demo-play-btn">▶</button>
+                <div class="demo-progress">
+                  <div class="demo-progress-bar"></div>
+                </div>
+                <div class="demo-duration">0:48</div>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-image">
+                <img
+                  src="image/couple.png"
+                  alt="Песня любимому"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="demo-tag">
+                Песня <span class="demo-name">любимому</span>
+              </h3>
+              <div class="demo-player">
+                <button class="demo-play-btn">▶</button>
+                <div class="demo-progress">
+                  <div class="demo-progress-bar"></div>
+                </div>
+                <div class="demo-duration">1:05</div>
               </div>
             </article>
           </div>
@@ -854,7 +894,9 @@
               <div class="reviews-strip">
                 <article class="review-card">
                   <div class="review-header">
-                    <div class="review-avatar">М</div>
+                    <div class="review-avatar">
+                      <img src="image/review-maria.jpg" alt="Мария" class="review-avatar-img" loading="lazy" />
+                    </div>
                     <div>
                       <div class="review-name">Мария</div>
                       <div class="review-meta">песня ко дню рождения</div>
@@ -864,7 +906,14 @@
                     Заказала песню для мамы на день рождения. Она слушала её три раза подряд
                     и всё время спрашивала: «Это ты про меня написала?». Плакала от счастья.
                   </p>
-                  <audio controls class="review-audio">
+                  <div class="demo-player review-player">
+                    <button class="demo-play-btn" type="button">▶</button>
+                    <div class="demo-progress">
+                      <div class="demo-progress-bar"></div>
+                    </div>
+                    <div class="demo-duration">0:53</div>
+                  </div>
+                  <audio class="review-audio" hidden>
                     <source src="demo-pop.mp3" type="audio/mpeg">
                     Ваш браузер не поддерживает аудио.
                   </audio>
@@ -872,7 +921,9 @@
 
                 <article class="review-card">
                   <div class="review-header">
-                    <div class="review-avatar">А</div>
+                    <div class="review-avatar">
+                      <img src="image/review-alexey.jpg" alt="Алексей" class="review-avatar-img" loading="lazy" />
+                    </div>
                     <div>
                       <div class="review-name">Алексей</div>
                       <div class="review-meta">песня для жены</div>
@@ -882,7 +933,14 @@
                     Заказал песню для жены на годовщину. Она была в восторге!
                     Теперь это наш особенный трек, который мы включаем в важные моменты.
                   </p>
-                  <audio controls class="review-audio">
+                  <div class="demo-player review-player">
+                    <button class="demo-play-btn" type="button">▶</button>
+                    <div class="demo-progress">
+                      <div class="demo-progress-bar"></div>
+                    </div>
+                    <div class="demo-duration">1:12</div>
+                  </div>
+                  <audio class="review-audio" hidden>
                     <source src="demo-meditation.mp3" type="audio/mpeg">
                     Ваш браузер не поддерживает аудио.
                   </audio>
@@ -890,7 +948,9 @@
 
                 <article class="review-card">
                   <div class="review-header">
-                    <div class="review-avatar">Н</div>
+                    <div class="review-avatar">
+                      <img src="image/review-natalia.jpg" alt="Наталья" class="review-avatar-img" loading="lazy" />
+                    </div>
                     <div>
                       <div class="review-name">Наталья</div>
                       <div class="review-meta">песня для подруги</div>
@@ -900,10 +960,76 @@
                     Подарила песню лучшей подруге. Она сказала, что это самый трогательный
                     подарок, который она когда-либо получала. Это бесценно.
                   </p>
-                  <audio controls class="review-audio">
+                  <div class="demo-player review-player">
+                    <button class="demo-play-btn" type="button">▶</button>
+                    <div class="demo-progress">
+                      <div class="demo-progress-bar"></div>
+                    </div>
+                    <div class="demo-duration">0:48</div>
+                  </div>
+                  <audio class="review-audio" hidden>
                     <source src="demo-ballad.mp3" type="audio/mpeg">
                     Ваш браузер не поддерживает аудио.
                   </audio>
+                </article>
+              </div>
+
+              <div class="video-reviews-strip">
+                <article class="video-review-card">
+                  <button
+                    class="video-thumb"
+                    type="button"
+                    onclick="openVideoReview('https://www.youtube.com/embed/VIDEO_ID_1?autoplay=1')"
+                  >
+                    <img
+                      src="image/vid-rev-1.png"
+                      alt="Видеоотзыв: песня для мамы"
+                      class="video-thumb-img"
+                      loading="lazy"
+                    />
+                    <div class="video-thumb-play">▶</div>
+                  </button>
+                  <div class="video-review-caption">
+                    Видеоотзыв: песня для мамы
+                  </div>
+                </article>
+
+                <article class="video-review-card">
+                  <button
+                    class="video-thumb"
+                    type="button"
+                    onclick="openVideoReview('https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1')"
+                  >
+                    <img
+                      src="image/vid-rev-2.png"
+                      alt="Видеоотзыв: песня любимому"
+                      class="video-thumb-img"
+                      loading="lazy"
+                    />
+                    <div class="video-thumb-play">▶</div>
+                  </button>
+                  <div class="video-review-caption">
+                    Видеоотзыв: песня любимому
+                  </div>
+                </article>
+
+                <article class="video-review-card">
+                  <button
+                    class="video-thumb"
+                    type="button"
+                    onclick="openVideoReview('https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1')"
+                  >
+                    <img
+                      src="image/vid-rev-3.png"
+                      alt="Видеоотзыв: песня для друзей"
+                      class="video-thumb-img"
+                      loading="lazy"
+                    />
+                    <div class="video-thumb-play">▶</div>
+                  </button>
+                  <div class="video-review-caption">
+                    Видеоотзыв: песня для друзей
+                  </div>
                 </article>
               </div>
             </div>
@@ -930,23 +1056,61 @@
             <div class="footer-meta">
               Эмоции меняются, но память о том, что его любят, — нет.
             </div>
-          </div>
-
-          <div>
             <div class="footer-links">
               <a href="#" target="_blank" rel="noreferrer">Telegram</a>
-              <a href="#" target="_blank" rel="noreferrer">Instagram*</a>
               <a href="#" target="_blank" rel="noreferrer">Яндекс Музыка</a>
               <a href="#" target="_blank" rel="noreferrer">Политика конфиденциальности</a>
               <a href="#" target="_blank" rel="noreferrer">Пользовательское соглашение</a>
-            </div>
-            <div class="footer-meta">
-              *организация, признанная экстремистской и запрещённая на территории РФ — укажите свою пометку при необходимости.
             </div>
           </div>
         </div>
       </div>
     </footer>
+  </div>
+
+  <div class="success-modal-overlay" id="successModalOverlay" aria-hidden="true">
+    <div class="success-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+      <button
+        class="success-modal-close"
+        type="button"
+        aria-label="Закрыть"
+        onclick="closeSuccessModal()"
+      >✕</button>
+      <div class="success-modal-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
+          <circle cx="28" cy="28" r="28" fill="#E75148" opacity="0.12"/>
+          <circle cx="28" cy="28" r="21" fill="#E75148" opacity="0.18"/>
+          <polyline points="17,29 24,36 39,21" stroke="#E75148" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <h3 class="success-modal-title" id="successModalTitle">Заявка успешно отправлена!</h3>
+      <p class="success-modal-text">Мы свяжемся с вами в ближайшее время по указанным контактным данным, чтобы уточнить детали и согласовать оплату.</p>
+      <button class="btn btn-primary success-modal-btn" type="button" onclick="closeSuccessModal()">
+        Отлично, жду!
+      </button>
+    </div>
+  </div>
+
+  <div class="video-modal-overlay" id="videoModalOverlay" aria-hidden="true">
+    <div class="video-modal-dialog" role="dialog" aria-modal="true">
+      <button
+        class="video-modal-close"
+        type="button"
+        aria-label="Закрыть видео"
+        onclick="closeVideoReview()"
+      >
+        ✕
+      </button>
+      <div class="video-modal-content">
+        <iframe
+          id="videoModalFrame"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
   </div>
 
   <script src="./script.js"></script>

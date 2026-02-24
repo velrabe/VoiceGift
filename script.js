@@ -80,7 +80,38 @@ function openTelegramGroup() {
 function handleFakeSubmit(event) {
   event.preventDefault();
   updatePrice();
-  alert("Здесь будет переход к оплате или отправка формы. Сейчас это демо.");
+  openSuccessModal();
+}
+
+function openSuccessModal() {
+  const overlay = document.getElementById("successModalOverlay");
+  if (!overlay) return;
+  overlay.classList.add("success-modal-overlay--visible");
+  overlay.setAttribute("aria-hidden", "false");
+  overlay.querySelector(".success-modal-close")?.focus();
+}
+
+function closeSuccessModal() {
+  const overlay = document.getElementById("successModalOverlay");
+  if (!overlay) return;
+  overlay.classList.remove("success-modal-overlay--visible");
+  overlay.setAttribute("aria-hidden", "true");
+}
+
+function openVideoReview(src) {
+  const overlay = document.getElementById("videoModalOverlay");
+  const frame = document.getElementById("videoModalFrame");
+  if (!overlay || !frame) return;
+  frame.src = src;
+  overlay.classList.add("video-modal-overlay--visible");
+}
+
+function closeVideoReview() {
+  const overlay = document.getElementById("videoModalOverlay");
+  const frame = document.getElementById("videoModalFrame");
+  if (!overlay || !frame) return;
+  overlay.classList.remove("video-modal-overlay--visible");
+  frame.src = "";
 }
 
 function initHeroStripSlider() {
@@ -213,6 +244,24 @@ document.addEventListener("DOMContentLoaded", function () {
     navOverlay.addEventListener("click", (event) => {
       if (event.target === navOverlay) {
         closeNav();
+      }
+    });
+  }
+
+  const videoOverlay = document.getElementById("videoModalOverlay");
+  if (videoOverlay) {
+    videoOverlay.addEventListener("click", (event) => {
+      if (event.target === videoOverlay) {
+        closeVideoReview();
+      }
+    });
+  }
+
+  const successOverlay = document.getElementById("successModalOverlay");
+  if (successOverlay) {
+    successOverlay.addEventListener("click", (event) => {
+      if (event.target === successOverlay) {
+        closeSuccessModal();
       }
     });
   }
