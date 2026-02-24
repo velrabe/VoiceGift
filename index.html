@@ -41,9 +41,36 @@
               Заказать песню
             </button>
           </nav>
+          <button class="site-nav-toggle" type="button" aria-label="Открыть меню" onclick="toggleNav()">
+            <svg class="site-nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
+
+    <div class="site-nav-overlay" id="siteNavOverlay">
+      <div class="site-nav-overlay-inner">
+        <button class="site-nav-overlay-close" type="button" aria-label="Закрыть меню" onclick="toggleNav()">
+          ✕
+        </button>
+        <nav class="site-nav-mobile" aria-label="Мобильное меню">
+          <button class="site-nav-mobile-link" type="button" onclick="handleNavClick('about')">
+            О нас
+          </button>
+          <button class="site-nav-mobile-link" type="button" onclick="handleNavClick('demos')">
+            Примеры
+          </button>
+          <button class="site-nav-mobile-link" type="button" onclick="handleNavClick('trust')">
+            Отзывы
+          </button>
+          <button class="site-nav-mobile-link site-nav-mobile-link-primary" type="button" onclick="handleNavClick('order')">
+            Заказать песню
+          </button>
+        </nav>
+      </div>
+    </div>
 
     <header class="hero" id="top">
       <div class="hero-inner-wrapper">
@@ -790,9 +817,12 @@
                       </div>
                     </div>
 
-                    <div style="flex: 1; max-width: 260px;">
+                    <div style="flex: 1; max-width: 320px; display: flex; flex-direction: column; gap: 8px;">
                       <button class="btn btn-primary" style="width: 100%;" type="submit">
-                        Оплатить и оформить заказ
+                        Отправить заявку и оплатить
+                      </button>
+                      <button class="btn btn-secondary" style="width: 100%;" type="submit">
+                        Отправить заявку позже
                       </button>
                       <div class="order-pay-note">
                         После нажатия мы свяжемся с вами, чтобы уточнить детали и

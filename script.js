@@ -60,6 +60,19 @@ function scrollToSection(sectionId) {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function toggleNav() {
+  document.body.classList.toggle("nav-open");
+}
+
+function closeNav() {
+  document.body.classList.remove("nav-open");
+}
+
+function handleNavClick(sectionId) {
+  scrollToSection(sectionId);
+  closeNav();
+}
+
 function openTelegramGroup() {
   window.open("https://t.me/your_meditations_group", "_blank");
 }
@@ -70,14 +83,107 @@ function handleFakeSubmit(event) {
   alert("Здесь будет переход к оплате или отправка формы. Сейчас это демо.");
 }
 
+function initHeroStripSlider() {
+  const track = document.querySelector(".hero-strip-track");
+  if (!track) return;
+
+  const cards = track.querySelectorAll(".hero-strip-card");
+  if (!cards.length) return;
+
+  const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reduceMotionQuery.matches) return;
+
+  let currentIndex = 0;
+  let timerId = null;
+
+  const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+  const getSlideWidth = () => {
+    const firstCard = cards[0];
+    const rect = firstCard ? firstCard.getBoundingClientRect() : null;
+    const section = track.closest(".hero-strip-section");
+    const sectionWidth = section
+      ? section.getBoundingClientRect().width
+      : 0;
+    const viewportWidth =
+      window.innerWidth || document.documentElement.clientWidth || 0;
+
+    const width = sectionWidth || viewportWidth || (rect ? rect.width : 0) || 0;
+
+    console.log("[heroStrip] width calc", {
+      rectWidth: rect ? rect.width : null,
+      sectionWidth,
+      viewportWidth,
+      usedWidth: width,
+    });
+
+    return width;
+  };
+
+  const goToSlide = (index, withTransition) => {
+    if (!isMobile()) return;
+    const width = getSlideWidth();
+    const offset = -index * width;
+    console.log("[heroStrip] goToSlide", { index, width, offset });
+    track.style.transition = withTransition
+      ? "transform 0.6s ease-in-out"
+      : "none";
+    track.style.transform = `translateX(${offset}px)`;
+  };
+
+  const scheduleNext = () => {
+    if (!isMobile()) return;
+    timerId = window.setTimeout(() => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      goToSlide(currentIndex, true);
+      scheduleNext();
+    }, 3000);
+  };
+
+  const start = () => {
+    if (!isMobile()) return;
+    if (timerId) {
+      window.clearTimeout(timerId);
+      timerId = null;
+    }
+    currentIndex = 0;
+    goToSlide(currentIndex, false);
+    scheduleNext();
+  };
+
+  const stop = () => {
+    if (timerId) {
+      window.clearTimeout(timerId);
+      timerId = null;
+    }
+    track.style.transition = "";
+    track.style.transform = "";
+  };
+
+  window.addEventListener("resize", () => {
+    if (isMobile()) {
+      start();
+    } else {
+      stop();
+    }
+  });
+
+  if (isMobile()) {
+    track.style.willChange = "transform";
+    start();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   updatePrice();
 
-  const decorEls = document.querySelectorAll(".section-title-decor");
-  if (!decorEls.length) return;
-
+  const decorEls = document.querySelectorAll(
+    ".section-title-decor, .price-decor-heart, .price-decor-note"
+  );
   const updateDecorParallax = () => {
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    if (!decorEls.length) return;
+    const viewportHeight =
+      window.innerHeight || document.documentElement.clientHeight || 0;
 
     decorEls.forEach((el) => {
       const rect = el.getBoundingClientRect();
@@ -85,7 +191,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const distanceFromCenter = elementCenter - viewportHeight / 2;
 
       const factorAttr = parseFloat(el.dataset.parallax);
-      const intensity = !Number.isNaN(factorAttr) ? factorAttr : 0.06;
+      const isPriceDecor =
+        el.classList.contains("price-decor-heart") ||
+        el.classList.contains("price-decor-note");
+      const defaultIntensity = isPriceDecor ? 0.03 : 0.06;
+      const intensity = !Number.isNaN(factorAttr)
+        ? factorAttr
+        : defaultIntensity;
       const offset = -distanceFromCenter * intensity;
 
       el.style.setProperty("--decor-parallax", `${offset}px`);
@@ -95,5 +207,16 @@ document.addEventListener("DOMContentLoaded", function () {
   updateDecorParallax();
   window.addEventListener("scroll", updateDecorParallax, { passive: true });
   window.addEventListener("resize", updateDecorParallax);
+
+  const navOverlay = document.querySelector(".site-nav-overlay");
+  if (navOverlay) {
+    navOverlay.addEventListener("click", (event) => {
+      if (event.target === navOverlay) {
+        closeNav();
+      }
+    });
+  }
+
+  initHeroStripSlider();
 });
 
