@@ -139,7 +139,7 @@ function initHeroStripSlider() {
     const viewportWidth =
       window.innerWidth || document.documentElement.clientWidth || 0;
 
-    const width = sectionWidth || viewportWidth || (rect ? rect.width : 0) || 0;
+    const width = sectionWidth || viewportWidth || (rect && rect.width) || 0;
 
     console.log("[heroStrip] width calc", {
       rectWidth: rect ? rect.width : null,
@@ -169,6 +169,17 @@ function initHeroStripSlider() {
       goToSlide(currentIndex, true);
       scheduleNext();
     }, 3000);
+  };
+
+  const goRelative = (delta) => {
+    if (!isMobile()) return;
+    if (timerId) {
+      window.clearTimeout(timerId);
+      timerId = null;
+    }
+    currentIndex = (currentIndex + delta + cards.length) % cards.length;
+    goToSlide(currentIndex, true);
+    scheduleNext();
   };
 
   const start = () => {
@@ -203,6 +214,46 @@ function initHeroStripSlider() {
     track.style.willChange = "transform";
     start();
   }
+
+  window.__heroStripSlider = {
+    next: () => goRelative(1),
+    prev: () => goRelative(-1),
+  };
+}
+
+function initHelpFab() {
+  const fab = document.querySelector(".help-fab");
+  if (!fab) return;
+  const toggle = fab.querySelector(".help-fab-toggle");
+  if (!toggle) return;
+
+  const close = () => {
+    fab.classList.remove("help-fab--open");
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    fab.classList.toggle("help-fab--open");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!fab.classList.contains("help-fab--open")) return;
+    if (!fab.contains(event.target)) {
+      close();
+    }
+  });
+}
+
+function heroStripNext() {
+  const api = window.__heroStripSlider;
+  if (!api || typeof api.next !== "function") return;
+  api.next();
+}
+
+function heroStripPrev() {
+  const api = window.__heroStripSlider;
+  if (!api || typeof api.prev !== "function") return;
+  api.prev();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -267,5 +318,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   initHeroStripSlider();
+  initHelpFab();
 });
 

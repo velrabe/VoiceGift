@@ -729,6 +729,40 @@ body.nav-open .site-nav-overlay {
   border-radius: 18px;
 }
 
+.hero-strip-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 28px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-strip-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 18px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hero-strip-arrow:active {
+  opacity: 0.85;
+}
+
 .section-alt-top {
   padding-top: 32px;
   padding-bottom: 0;
@@ -1544,6 +1578,12 @@ textarea {
   min-height: 80px;
 }
 
+@media (max-width: 768px) {
+  textarea[name="description"] {
+    min-height: 160px;
+  }
+}
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -1912,9 +1952,15 @@ select:focus {
       rgba(255, 255, 255, 0) 60%
     ),
     url("image/footer.png");
-  background-size: auto 100%;
+  background-size: auto 200%;
   background-position: right center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background-image: none;
+  }
 }
 
 .video-modal-overlay {
@@ -2116,6 +2162,104 @@ select:focus {
   margin-top: 12px;
 }
 
+/* ── Floating help button ────────────────────────────────────── */
+.help-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.help-fab-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: 13px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+.help-fab-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.help-fab-menu {
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+}
+
+.help-fab-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.help-fab-link:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.help-fab-link-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-fab-link--tg .help-fab-link-icon {
+  color: #29a9eb;
+}
+
+.help-fab-link--wa .help-fab-link-icon {
+  color: #25d366;
+}
+
+.help-fab--open .help-fab-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .help-fab:hover .help-fab-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 640px) {
   .price-card {
     grid-template-columns: minmax(0, 1fr);
@@ -2178,9 +2322,8 @@ select:focus {
   .section {
     padding: 48px 0;
   }
-
-  .section-header {
-    overflow-x: clip;
+  .hero-strip-arrows {
+    display: flex;
   }
   .site-header-inner {
     padding: 8px 0;
@@ -2237,9 +2380,19 @@ select:focus {
     display: contents;
   }
   .hero-strip-card {
-    width: 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 calc(100% - 80px);
+    width: calc(100% - 80px);
+    margin: 0 40px;
+    max-width: none;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    padding: 12px;
+    position: static;
+  }
+
+  .hero-strip-card::before {
+    content: none;
   }
   .order-section {
     position: static;
@@ -2264,6 +2417,17 @@ select:focus {
   
   .price-card-new {
     padding: 24px 20px 20px;
+  }
+
+  .reviews-strip,
+  .video-reviews-strip {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
+  }
+
+  .review-card,
+  .video-review-card {
+    scroll-snap-align: center;
   }
 }
 
